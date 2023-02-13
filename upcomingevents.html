@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amazing Events</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="styles/index.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- navbar -->
+    <nav class="navbar bg-body-tertiary navbar-expand-lg ">
+      <div class="container-fluid ">
+
+        <a class="navbar-brand" href="#"> <img src="./images/LogoAmazingEvents.png" width="150" alt=""> </a>
+
+        <div class=" collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"> <a class="nav-link" aria-current="page" href="index.html">Home</a> </li>
+            <li class="nav-item"> <a class="nav-link active disabled" href="#">Upcoming Events</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="pastevents.html">Past Events</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="contact.html">Contact</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="stats.html">Stats</a> </li>
+          </ul>
+        </div>
+
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+      </div>
+    </nav>
+
+    <!-- titulo y flechas -->
+    <div class="pages-arrows">
+      <a href="index.html" id="left-arrow">
+        <h1>
+          < </h1>
+      </a>
+      <h1>Upcoming Events</h1>
+      <a href="pastevents.html" id="rigth-arrow">
+        <h1> > </h1>
+      </a>
+    </div>
+
+    <!-- barra de busqueda -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <div class=" collapse navbar-collapse" id="navbarSearch">
+          <fieldset class="navbar-nav me-auto mb-2 mb-lg-0">
+            <label> <input type="checkbox" name="searchfilter" value="c1"> Category1 &emsp;</label>
+            <label> <input type="checkbox" name="searchfilter" value="c2"> Category2 &emsp;</label>
+            <label> <input type="checkbox" name="searchfilter" value="c3"> Category3 &emsp;</label>
+            <label> <input type="checkbox" name="searchfilter" value="c4"> Category4 &emsp;</label>
+          </fieldset>
+
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch"
+          aria-controls="navbarSearch" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+
+      </div>
+
+    </nav>
+
+    <!-- Cards -->
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-5">
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" class="card-img-top" alt="Skyscrapers" />
+
+          <div class="card-body">
+            <h5 class="card-title">Título</h5>
+            <p class="card-text"> Texto descriptivo. </p>
+          </div>
+
+          <div class="card-footer">
+            <small class="text-muted">Price $0000</small>
+            <button href="#" class="btn-vermas">Ver más</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="card-img-top" alt="Los Angeles Skyscrapers" />
+          <div class="card-body">
+            <h5 class="card-title">Título</h5>
+            <p class="card-text"> Texto descriptivo. </p>
+          </div>
+
+          <div class="card-footer">
+            <small class="text-muted">Price $0000</small>
+            <button href="#" class="btn-vermas">Ver más</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" class="card-img-top" alt="Palm Springs Road" />
+          <div class="card-body">
+            <h5 class="card-title">Título</h5>
+            <p class="card-text"> Texto descriptivo. </p>
+          </div>
+
+          <div class="card-footer">
+            <small class="text-muted">Price $0000</small>
+            <button href="#" class="btn-vermas">Ver más</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+<!-- Footer -->
+<footer class="text-center text-lg-start  fixed-bottom container"><!--  text-muted -->
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div>
+      <a href="" class="me-4 link-secondary">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Left -->
+    
+    <!-- Right -->
+    <div class="me-5 d-none d-lg-block">
+      <img src="./images/logoMH.jpg" width="25" alt="Mind Hub"> <span>Cohort: FE09-TT</span>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+</footer>
+<!-- Footer -->
+
+  </div> <!-- container -->
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

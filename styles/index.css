@@ -1,0 +1,77 @@
+/* Nav bar */
+.navbar-collapse{
+    flex-grow: 0 !important;
+}
+
+/* Pages  & Arrows */
+.pages-arrows{
+    display: flex;
+    justify-content: space-between;
+}
+.pages-arrows>h1{
+    /* display: flex; */
+/* justify-content:  center; */
+color: #ff0000;
+}
+#left-arrow{ 
+    display: flex;
+    text-decoration: none;
+    justify-content: flex-start;
+}
+.left-arrow-index{ 
+    visibility: hidden;
+}
+#rigth-arrow{ 
+    display: flex;
+    text-decoration: none;
+    justify-content: flex-end;
+}
+.rigth-arrow-stats, .rigth-arrow-event{
+    visibility: hidden;
+}
+
+
+/* Cards */
+.card-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn-vermas{
+    justify-content: center;
+    text-align: center;
+
+    background-color: #d505ff;
+    border-radius: 10px;
+    color: #ffffff;
+    cursor: pointer;
+    text-decoration: none;
+    min-width: 114px;
+    height: 44px;
+    padding: 10px 30px;
+    font-size: 0.9rem;
+
+}
+
+.btn-vermas:hover {
+    background-color: #3a2cff;
+}
+.card, .card-event{
+    box-shadow: 1px 1px 10px 5px #3a2cff ;
+}
+.card:hover{
+    box-shadow: 1px 1px 10px 5px #ff0000 ;
+}
+
+
+/* footer */
+footer{
+    background-color: ;
+    color: ;
+}
+
+/* Contact Form */
+.section-contact-form{
+    max-width: 500px;
+    margin-top: 50px;
+}
