@@ -1,7 +1,10 @@
 body{
-    /* background: rgb(2,0,36);
-        background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(219,0,104,1) 100%); */
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(219,0,104,1) 100%);
+    color: #ffffff;
+
 }
+
 /* Nav bar */
 .navbar-collapse{
     flex-grow: 0 !important;
@@ -11,11 +14,13 @@ body{
 .pages-arrows{
     display: flex;
     justify-content: space-between;
+    margin-top: 30px;
 }
 .pages-arrows>h1{
     /* display: flex; */
 /* justify-content:  center; */
-color: #ff0000;
+color: #fffefe;
+font-family: 'Roboto', sans-serif;
 }
 #left-arrow{ 
     display: flex;
@@ -62,16 +67,23 @@ color: #ff0000;
 }
 .card, .card-event{
     box-shadow: 1px 1px 10px 5px #3a2cff ;
+    color: black;
 }
+
 .card:hover{
-    box-shadow: 1px 1px 10px 5px #ff0000 ;
+    box-shadow: 1px 1px 10px 5px rgba(219,3,104,1);
 }
 
 
 /* footer */
 footer{
-    background-color: ;
-    color: ;
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(219,0,104,1) 100%);
+
+    color: white;
+    position: sticky; 
+    margin-bottom: 0px;
+    
 }
 
 /* Contact Form */
@@ -83,13 +95,13 @@ footer{
 /* Event */
 .cardevent {
     flex-direction: row !important; 
-    margin-top: 50px;
+    margin: 80px;
 }
 
 
 /* Stats */
 td:hover {
-    background-color: #fddbdb;
+    background-color:  rgb(2,0,36);
 }
 
 
@@ -105,4 +117,7 @@ table {
     max-width: 800px;
     margin-top: 50px;
     
+}
+table td{
+    color: white;
 }
