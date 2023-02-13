@@ -1,3 +1,7 @@
+body{
+    background: rgb(2,0,36);
+background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(219,0,104,1) 100%);
+}
 /* Nav bar */
 .navbar-collapse{
     flex-grow: 0 !important;
@@ -74,4 +78,31 @@ footer{
 .section-contact-form{
     max-width: 500px;
     margin-top: 50px;
+}
+
+/* Event */
+.cardevent {
+    flex-direction: row !important; 
+    margin-top: 50px;
+}
+
+
+/* Stats */
+td:hover {
+    background-color: #fddbdb;
+}
+
+
+table {
+    caption-side: top;
+}
+.table caption{
+    background-color: bisque;
+    padding: 15px;
+    height: 50px;
+}
+.stats-table{
+    max-width: 800px;
+    margin-top: 50px;
+    
 }
