@@ -46,21 +46,6 @@ font-family: 'Roboto', sans-serif;
     justify-content: space-between;
     align-items: center;
 }
-.btn-vermas{
-    justify-content: center;
-    text-align: center;
-
-    background-color: #d505ff;
-    border-radius: 10px;
-    color: #ffffff;
-    cursor: pointer;
-    text-decoration: none;
-    min-width: 114px;
-    height: 44px;
-    padding: 10px 30px;
-    font-size: 0.9rem;
-
-}
 
 .btn-vermas:hover {
     background-color: #3a2cff;
@@ -70,20 +55,16 @@ font-family: 'Roboto', sans-serif;
     color: black;
 }
 
-.card:hover{
-    box-shadow: 1px 1px 10px 5px rgba(219,3,104,1);
+.card-img-top {
+    overflow: hidden;
 }
-
 
 /* footer */
 footer{
-    background: rgb(2,0,36);
-    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(219,0,104,1) 100%);
-
+    background: radial-gradient(circle, rgba(219,0,104,1) 100%);
     color: white;
     position: sticky; 
     margin-bottom: 0px;
-    
 }
 
 /* Contact Form */
@@ -95,7 +76,7 @@ footer{
 /* Event */
 .cardevent {
     flex-direction: row !important; 
-    margin: 80px;
+    margin: 100px;
 }
 
 
