@@ -24,7 +24,7 @@ var data = {
         "capacity":45000,
         "assistance":42756,
         "price":10
-      }/* ,
+      } ,
       {
         _id: 3,
         "image":"https://i.postimg.cc/GmHRkbNV/Jurassic-Park.jpg",
@@ -168,6 +168,6 @@ var data = {
         "capacity":9000,
         "estimate":9000,
         "price":250
-      } */
+      } 
     ]
   };
