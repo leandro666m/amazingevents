@@ -19,13 +19,11 @@
 
 
 var loadCard = {
-    upcoming: () => data.events.forEach( (event) => { if (new Date(event.date) < new Date(data.currentDate)) { createGridCard(event) } } ),
-    past: () => data.events.forEach( (event) => { if (new Date(event.date) > new Date(data.currentDate)) { createGridCard(event) } } ),
-
+    /* upcoming: () => data.events.forEach( (event) => { if (new Date(event.date) < new Date(data.currentDate)) { createGridCard(event) } } ), */
+    upcoming: () => data.events.forEach( (event) => { (new Date(event.date) < new Date(data.currentDate)) && createGridCard(event)  } ),
+    past: () => data.events.forEach( (event) => {  (new Date(event.date) > new Date(data.currentDate)) && createGridCard(event) }  ),
     default: () => data.events.forEach( (event) => { createGridCard(event) } ),
-};
-
-/* ( loadCard[1] || loadCard.default) (); */
+};    /* ( loadCard[1] || loadCard.default) (); */
 
 function createGridCard(event) {
     const rowcards = document.getElementById("row-cards"); //contenedor
@@ -57,11 +55,17 @@ function createGridCard(event) {
         smalltext.classList.add("text-muted");
         smalltext.innerHTML = `Price $${event.price}`;
   
-    let aButton = document.createElement("a");
+    var aButton = document.createElement("a");
         aButton.classList.add("btn", "btn-primary");
-        aButton.setAttribute("href", "event.html");
+        aButton.setAttribute("href", `event.html?id=${event._id-1}`);
         aButton.innerHTML = "See more";
-  
+        /* aButton.addEventListener('click', () => {
+            const id = event.id;  
+            alert("id: " + event.id)
+             const url = `../event.html?id=${id}`;
+            window.location.href = url; 
+          }); */
+
     divcardbody.appendChild(title);
     divcardbody.appendChild(text);
   
@@ -77,3 +81,31 @@ function createGridCard(event) {
     rowcards.appendChild(divcol);
 }
 
+
+  /* 
+let template = (foto, nombre, descripcion, precio) =>{
+    return `
+    
+    `
+};
+
+function printUpcomingEvents(){
+
+    let events = data.events;
+    let currentDate = data.currentDate;
+    let template = [];
+
+    for (let element of events) {
+if( element.date > currentDate){
+
+        template.push( template(element.image, element.name, element.description, element.price))
+        const element = array[element];
+        
+    }
+}
+let tarjeta = document.getElementById("upcomingEvents");
+tarjeta.innerHTML = template.join("");
+
+}
+
+printUpcomingEvents() */
