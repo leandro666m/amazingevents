@@ -1,4 +1,4 @@
-var eventid = new URLSearchParams(window.location.search).get("id");
+var eventid = new URLSearchParams(window.location.search).get("id") - 1;
 
 
     const event_cards = document.getElementById("event-card"); //contenedor
