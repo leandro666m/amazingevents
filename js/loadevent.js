@@ -22,3 +22,7 @@ var eventid = new URLSearchParams(window.location.search).get("id") - 1;
 
     divcol2.appendChild(divcardbody);
     
+/*
+usar find
+console.log( animales.filter (each => each.tipo === "terrestre") )
+*/ 
