@@ -60,10 +60,13 @@
       <div class="container-fluid">
         <div class=" collapse navbar-collapse" id="navbarSearch">
           <fieldset class="navbar-nav me-auto mb-2 mb-lg-0">
-            <label> <input type="checkbox" name="searchfilter" value="c1"> Category1 &emsp;</label>
-            <label> <input type="checkbox" name="searchfilter" value="c2"> Category2 &emsp;</label>
-            <label> <input type="checkbox" name="searchfilter" value="c3"> Category3 &emsp;</label>
-            <label> <input type="checkbox" name="searchfilter" value="c4"> Category4 &emsp;</label>
+            <input type="checkbox" class="checks" name="categories" id="food" value="food"> <label> Food Fair &emsp;</label>
+            <input type="checkbox" class="checks" name="categories" id="museum" value="museum"><label> Museum &emsp;</label>
+            <input type="checkbox" class="checks" name="categories" id="party" value="party"> <label> Costume Party &emsp;</label>
+            <input type="checkbox" class="checks" name="categories" id="music" value="music"> <label> Music Concert &emsp;</label>
+            <input type="checkbox" class="checks" name="categories" id="race" value="race"> <label> Race &emsp;</label>
+            <input type="checkbox" class="checks" name="categories" id="book" value="book"> <label> Book Exchange &emsp;</label>
+            <input type="checkbox" class="checks" name="categories" id="cinema" value="cinema"> <label> Cinema &emsp;</label>
           </fieldset>
         </div>
 
@@ -73,8 +76,8 @@
         </button>
 
         <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-primary " type="submit">Search</button>
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search" id="search">
+          <button class="btn btn-primary" type="submit" id="searchButton">Search</button>
         </form>
 
       </div>
@@ -86,7 +89,7 @@
 
     </div>
 
-    </div>
+  </div>
     
     <!-- Footer -->
     <footer class="text-center text-lg-start container">
@@ -121,6 +124,7 @@
 <script src="./js/events.js"></script>
 <script>   loadCard.all();  </script>
 
+<script src="./js/filters_search.js"></script>
 
 
 
