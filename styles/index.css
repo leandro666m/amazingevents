@@ -44,12 +44,11 @@ font-family: 'Roboto', sans-serif;
 }
 
 
-/* Cards */
+/* Cards  index - upcoming - past*/
 .card-footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 }
 
 .btn-vermas:hover {
@@ -79,11 +78,27 @@ footer{
     margin-top: 50px;
 }
 
-/* Event */
+/* Event details*/
 .cardevent {
-    flex-direction: row !important; 
+    /*flex-direction: row !important; */
     margin: 100px;
 }
+
+.card {
+ display:flex; /* establecer el contenedor principal como un contenedor flex */
+ flex-direction: row; /* establecer la dirección del eje principal */
+ justify-content: space-between; /* distribuir los elementos en los extremos opuestos */
+ align-items: flex-start; /* alinear los elementos en el extremo superior */
+}
+  
+  .card-body-event {
+    flex: 1; /* hacer que el cuerpo de la tarjeta ocupe todo el espacio disponible */
+  }
+  
+  .footer-details {
+    align-self: flex-end; /* alinear el pie de página en el extremo inferior */
+  }
+  
 
 
 /* Stats */

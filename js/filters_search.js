@@ -14,16 +14,50 @@ function captureData() {
   console.log("en capturedata: "); console.log(dataToSearch);
 }
 
-
-let searchButton = document.getElementById(`searchButton`)
-    searchButton.addEventListener(`click`, (evento) => {
-      evento.preventDefault()
-      captureData()
-      indexFilter(dataToSearch)
-    }
+if( document.getElementById(`searchBtn`) ){
+  let searchButton = document.getElementById(`searchBtn`)
+      searchButton.addEventListener(`click`, (evento) => {
+        evento.preventDefault()
+        captureData()
+        indexFilter(dataToSearch)
+        }
+      )
+}else if (document.getElementById(`upCSearchBtn`) ) {
+  let upCSearchButton = document.getElementById(`upCSearchBtn`)
+  upCSearchButton.addEventListener(`click`, (evento) => {
+    evento.preventDefault()
+    captureData()
+    upcomingFilter(dataToSearch)
+  }
 )
+} else {
+  let pastCSearchButton = document.getElementById(`pastCSearchBtn`)
+  pastCSearchButton.addEventListener(`click`, (evento) => {
+    evento.preventDefault()
+    captureData()
+    pastFilter(dataToSearch)
+  }
+  )
+} ;
 
-/* function indexFilter(dataToSearch){
+
+  /* let searchButton = document.getElementById(`searchBtn`)
+      searchButton.addEventListener(`click`, (evento) => {
+        evento.preventDefault()
+        captureData()
+        indexFilter(dataToSearch)
+      }
+  ) */
+
+ /*  let upCSearchButton = document.getElementById(`upCSearchBtn`)
+  upCSearchButton.addEventListener(`click`, (evento) => {
+    evento.preventDefault()
+    captureData()
+    upcomingFilter(dataToSearch)
+  }
+) */
+
+function indexFilter(dataToSearch){
   var array = []
    for (const elem of dataToSearch.categories) {
       array.push( data.events.map( cadaEvento => ( cadaEvento.category == elem ) ? 
@@ -31,13 +65,27 @@ let searchButton = document.getElementById(`searchButton`)
       )
    }
    document.getElementById("row-cards").innerHTML = array.join("")
- } */
+ }
  
- function indexFilter(dataToSearch){
+
+ function upcomingFilter(dataToSearch){
   var array = []
    for (const elem of dataToSearch.categories) {
       array.push( 
-        data.events.map(cadaEvento=>(cadaEvento.category==elem) ? cardTemplate( cadaEvento._id, cadaEvento.image, cadaEvento.name, cadaEvento.description, cadaEvento.price) : "" ).join("")
+        data.events.map(cadaEvento=>(cadaEvento.category==elem) ? 
+          cardTemplate( cadaEvento._id, cadaEvento.image, cadaEvento.name, cadaEvento.description, cadaEvento.price) : "" ).join("")
+      )
+   }
+   document.getElementById("row-cards").innerHTML = array.join("")
+ }
+
+
+ function pastFilter(dataToSearch){
+  var array = []
+   for (const elem of dataToSearch.categories) {
+      array.push( 
+        data.events.map(cadaEvento=>(cadaEvento.category==elem) ? 
+          cardTemplate( cadaEvento._id, cadaEvento.image, cadaEvento.name, cadaEvento.description, cadaEvento.price) : "" ).join("")
       )
    }
    document.getElementById("row-cards").innerHTML = array.join("")
