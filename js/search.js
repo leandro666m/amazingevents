@@ -1,3 +1,0 @@
-/*
-usar filter 
-*/
