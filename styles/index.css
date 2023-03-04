@@ -21,8 +21,6 @@ body{
     margin-top: 30px;
 }
 .pages-arrows>h1{
-    /* display: flex; */
-/* justify-content:  center; */
 color: #fffefe;
 font-family: 'Roboto', sans-serif;
 }
@@ -43,18 +41,16 @@ font-family: 'Roboto', sans-serif;
     visibility: hidden;
 }
 
-
 /* Cards  index - upcoming - past*/
 .card-footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 .btn-vermas:hover {
     background-color: #3a2cff;
 }
-.card, .card-event{
+.card {
     box-shadow: 1px 1px 2px 2px #3a2cff ; 
     color: black;
 }
@@ -64,6 +60,10 @@ font-family: 'Roboto', sans-serif;
 .card-img-top {
     object-fit: cover;
     height: 100%;
+}
+.card-img-notfound{
+    object-fit: cover;
+    max-height: 300px; max-width: 400px;
 }
 
 /* footer */
@@ -80,33 +80,19 @@ footer{
 
 /* Event details*/
 .cardevent {
-    /*flex-direction: row !important; */
+    flex-direction: row !important; 
     margin: 100px;
 }
-
-.card {
- display:flex; /* establecer el contenedor principal como un contenedor flex */
- flex-direction: row; /* establecer la dirección del eje principal */
- justify-content: space-between; /* distribuir los elementos en los extremos opuestos */
- align-items: flex-start; /* alinear los elementos en el extremo superior */
+.der{
+    display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-  
-  .card-body-event {
-    flex: 1; /* hacer que el cuerpo de la tarjeta ocupe todo el espacio disponible */
-  }
-  
-  .footer-details {
-    align-self: flex-end; /* alinear el pie de página en el extremo inferior */
-  }
-  
-
 
 /* Stats */
 td:hover {
     background-color:  rgb(2,0,36);
 }
-
-
 table {
     caption-side: top;
 }

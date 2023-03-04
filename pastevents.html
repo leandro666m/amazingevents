@@ -14,7 +14,7 @@
 
 </head>
 
-<body>
+<body id="past">
   <div class="container">
 
     <!-- navbar -->
@@ -55,36 +55,28 @@
     </div>
 
     <!-- barra de busqueda -->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg" >
       <div class="container-fluid">
         <div class=" collapse navbar-collapse" id="navbarSearch">
-          <fieldset class="navbar-nav me-auto mb-2 mb-lg-0">
-            <label> <input type="checkbox" name="searchfilter" value="c1"> Category1 &emsp;</label>
-            <label> <input type="checkbox" name="searchfilter" value="c2"> Category2 &emsp;</label>
-            <label> <input type="checkbox" name="searchfilter" value="c3"> Category3 &emsp;</label>
-            <label> <input type="checkbox" name="searchfilter" value="c4"> Category4 &emsp;</label>
-          </fieldset>
+            <fieldset class="navbar-nav me-auto mb-2 mb-lg-0" id="checks-and-search">
+                  <!-- <script src="./js/template_checks_search.js"></script> -->
+            </fieldset>
+          </div>
 
-        </div>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch"
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch"
           aria-controls="navbarSearch" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-primary " type="submit">Search</button>
+          <form class="d-flex" role="search">
+            <input onkeyup="captureData()" name="texto" id="id_search" class="form-control me-2" type="search" placeholder="Search">
         </form>
 
       </div>
-
     </nav>
 
     <!-- Cards -->
-    <div  class="row row-cols-1 row-cols-md-4 g-4 mt-5"  id="row-cards">
-      
-    </div>
+    <div class="row row-cols-1 row-cols-md-4 g-4 mt-5" id="row-cards-p">  </div>
     
     <!-- Footer -->
     <footer class="text-center text-lg-start  container">
@@ -115,11 +107,13 @@
   integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
   crossorigin="anonymous"></script>
   
-    <script src="./js/data.js"></script>
-    <script src="./js/cardTemplate.js"></script>
-    <script src="./js/events.js"></script>
+  <script src="./js/data.js"></script>
 
-    <script>   loadCard.past();  </script>
+  <script src="./js/template_checks_search.js"></script>
+  <script src="./js/template_gridcards.js"></script>
+
+  <script src="./js/filters_search.js"></script>
+
 
 </body>
 
