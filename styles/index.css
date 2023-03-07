@@ -74,12 +74,12 @@ footer{
 
 /* Contact Form */
 .section-contact-form{
-    max-width: 500px;
-    margin-top: 50px;
+    max-width: 800px;
 }
 .input-error{
     border: red solid 3px;
 }
+
 /* Event details*/
 .cardevent {
     flex-direction: row !important; 
