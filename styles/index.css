@@ -14,33 +14,6 @@ body{
     flex-grow: 0 !important;
 }
 
-/* Pages  & Arrows */
-.pages-arrows{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
-}
-.pages-arrows>h1{
-color: #fffefe;
-font-family: 'Roboto', sans-serif;
-}
-#left-arrow{ 
-    display: flex;
-    text-decoration: none;
-    justify-content: flex-start;
-}
-.left-arrow-index{ 
-    visibility: hidden;
-}
-#rigth-arrow{ 
-    display: flex;
-    text-decoration: none;
-    justify-content: flex-end;
-}
-.rigth-arrow-stats, .rigth-arrow-event{
-    visibility: hidden;
-}
-
 /* Cards  index - upcoming - past*/
 .card-footer{
     display: flex;
@@ -64,6 +37,22 @@ font-family: 'Roboto', sans-serif;
 .card-img-notfound{
     object-fit: cover;
     max-height: 300px; max-width: 400px;
+}
+
+.card{
+    transition: all 0.5s ease-in-out;
+}
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff,0 0 30px #fff,0 0 40px;
+    z-index: 1;
+}
+.card-content{
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.card:hover .card-content{
+    opacity: 1;
 }
 
 /* footer */

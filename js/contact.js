@@ -1,35 +1,31 @@
-// para deshabilitar el envío de formularios si hay campos no válidos
+
 ( function () {
-    'use strict'
-      // Obtener todos los formularios a los que queremos aplicar estilos de validación de Bootstrap personalizados
+
+
     var forms = document.querySelectorAll('.needs-validation')
-  
-    // Bucle sobre ellos y evitar el envío
-    let array_form = Array.prototype.slice.call(forms)
-        array_form.forEach( (each) => {
-            each.addEventListener('submit'
-                                    , (event) => {
-                                                if (!each.checkValidity()) {
-                                                    event.preventDefault()
-                                                    event.stopPropagation()
-                                                }else{  
-                                                    Swal.fire({
-                                                        'title': 'Enviado',
-                                                        'text': `A la brevedad nos pondremos en contacto.`,
-                                                        'icon': 'success'
-                                                        });
-                                                        event.preventDefault()
-                                                        event.stopPropagation()
-                                                }
-                                        
-                                                each.classList.add('was-validated')
-                                                }
-                                    )
-        } )
-        
-        
-        
-        
+
+    /* let array_form = Array.prototype.slice.call(forms) */
+    let array_form = Array.from(forms)
+    console.log(array_form);
+        array_form.forEach( each => each.addEventListener('submit', event => {
+                                                                        if ( each.checkValidity() ) {
+                                                                            Swal.fire({ 'title': 'Enviado',
+                                                                                    'text': `A la brevedad nos pondremos en contacto.`,
+                                                                                    'icon': 'success'   });
+                                                                                    validationCustom01.value=""
+                                                                                    validationCustom02.value=""
+                                                                                    validationCustom03.value=""
+                                                                            event.preventDefault()
+                                                                            event.stopPropagation()
+                                                                        }else{  
+                                                                                event.preventDefault()
+                                                                                event.stopPropagation()
+                                                                        }
+                                                                
+                                                                        each.classList.add('was-validated')
+                                                                        }
+                                                                    ,false)  ) 
+                                                     
   }
 ) ()
 
