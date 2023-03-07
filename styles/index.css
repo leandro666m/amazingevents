@@ -77,7 +77,9 @@ footer{
     max-width: 500px;
     margin-top: 50px;
 }
-
+.input-error{
+    border: red solid 3px;
+}
 /* Event details*/
 .cardevent {
     flex-direction: row !important; 
