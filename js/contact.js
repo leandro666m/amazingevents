@@ -9,8 +9,8 @@
     console.log(array_form);
         array_form.forEach( each => each.addEventListener('submit', event => {
                                                                         if ( each.checkValidity() ) {
-                                                                            Swal.fire({ 'title': 'Enviado',
-                                                                                    'text': `A la brevedad nos pondremos en contacto.`,
+                                                                            Swal.fire({ 'title': 'Sent',
+                                                                                    'text': `We will contact you as soon as possible.`,
                                                                                     'icon': 'success'   });
                                                                                     validationCustom01.value=""
                                                                                     validationCustom02.value=""
