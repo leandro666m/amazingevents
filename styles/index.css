@@ -72,7 +72,8 @@ footer{
 /* Event details*/
 .cardevent {
     flex-direction: row !important; 
-    margin: 100px;
+    width: 100%;
+    padding: 30px;
 }
 .der{
     display: flex;

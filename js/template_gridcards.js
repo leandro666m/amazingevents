@@ -16,7 +16,7 @@ function cardTemplate(evento){
 
             <div class="card-footer">
               <small class="text-muted">Price: $ ${evento.price}</small>
-              <a  class="btn btn-primary" href="event.html?id=${evento._id}" role="button">See more</a>
+              <a class="btn btn-primary" onclick="swaEvent(${evento._id})" role="button">See more</a>
             </div>
 
         </div>
@@ -47,25 +47,69 @@ function printTemplates(events_array) {
 printTemplates(data.events)
 
 function noEvent(){
-  var body_tag_id = document.querySelector('#row-cards') || document.querySelector('#row-cards-uc') || document.querySelector('#row-cards-p');
-  body_tag_id.className ="row card cardevent bg-light p-2"
-  body_tag_id.innerHTML = `
-  
+     Swal.fire({
+      html: `
+      <div class="row cardevent bg-light" id="event-card"> 
             <div class="col-md-6">
-              <img src="./images/no_result.png" class="card-img-notfound"/>
-            </div>
-              
-            <div class="col-md-6 der ">
-                <div class="card-body-event">
-                    <h4 class="card-title">No events found</h4>
-                    <p class="card-text"> Try another search!</p>
-                </div>
-                <div class="footer-details">
-                    <div class="card-footer">
-                      <a  class="btn btn-primary" href="javascript:history.back(-1);" role="button">Back</a>
-                    </div>
-                </div>
-            </div>
-  
-            `
+            <img src="./images/no_result.png" class="card-img-notfound"/>
+          </div>
+            
+          <div class="col-md-6 der ">
+              <div class="card-body-event">
+                  <h4 class="card-title">No events found</h4>
+                  <p class="card-text"> Try another search!</p>
+              </div>
+          </div>
+      </div>
+      `,
+      showCloseButton: false,
+      confirmButtonText: 'Back',
+      width: '50%',
+      //grow: 'row',
+      padding: '1rem',
+      scrollbarPadding: false,
+      color: '#716add',
+      backdrop: 'rgba(247,0,18,0.38)',
+    })
+
 }
+
+function swaEvent(ev){
+
+  evento=data.events.find(e=>e._id===ev)
+
+      Swal.fire({
+      html: `
+      <div class="row cardevent bg-light" id="event-card"> 
+          <div class="col-md-6">
+              <img src="${evento.image}" class="card-img-top"/>
+          </div>
+
+          <div class="col-md-6 der">
+            <div class="card-body-event">
+                <h2 class="card-title">${evento.name}</h2> <br>
+                <small >${evento.date}</small> <br>
+                <p class="card-text">${evento.description}</p>
+            </div>
+            <div class="footer-details">
+                <div class="card-footer">
+                    <small>Price $${evento.price}</small>
+                    <small>Place: ${evento.place}</small>
+                </div>
+            </div>
+          </div>
+
+      </div>
+      `,
+      showCloseButton: false,
+      confirmButtonText: '<i class="fa fa-thumbs-up"></i> Great!',
+      width: '70%',
+      //grow: 'row',
+      padding: '1rem',
+      scrollbarPadding: false,
+      color: '#716add',
+      backdrop: 'rgba(0,30,100,0.76)',
+    })
+
+}
+
