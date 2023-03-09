@@ -6,4 +6,8 @@ function template_checks_search( id_etiqueta , categorias) {
     document.querySelector(id_etiqueta).innerHTML = categorias.join('')
 }
 
+
+let categorias = [] //array de categorias de eventos SIN repetirse
+data.events.forEach( each => { !categorias.includes(each.category) && categorias.push(each.category) } )
+
 template_checks_search('#checks-and-search', categorias)

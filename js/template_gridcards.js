@@ -21,7 +21,8 @@ function cardTemplate(evento){
 
         </div>
 
-    </div>`}
+    </div>`
+  }
 
     /* events_array es = "data.events"  ó  "filtred_events_array.length" de filters_search.js */ 
 function printTemplates(events_array) {
@@ -43,8 +44,6 @@ function printTemplates(events_array) {
 
     (body_tag_id.innerHTML==="") && noEvent()
 }
-
-printTemplates(data.events)
 
 function noEvent(){
      Swal.fire({
@@ -113,3 +112,5 @@ function swaEvent(ev){
 
 }
 
+
+printTemplates(data.events)

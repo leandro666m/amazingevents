@@ -171,6 +171,3 @@ var data = {
       } 
     ]
   };
-
-  let categorias = [] //array de categorias de eventos SIN repetirse
-  data.events.forEach(each => { !categorias.includes(each.category) && categorias.push(each.category)} )
