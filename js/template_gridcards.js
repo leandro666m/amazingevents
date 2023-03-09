@@ -16,7 +16,7 @@ function cardTemplate(evento){
 
             <div class="card-footer">
               <small class="text-muted">Price: $ ${evento.price}</small>
-              <a class="btn btn-primary" onclick="swaEvent(${evento._id})" role="button">See more</a>
+              <a class="btn btn-primary" onclick="swaEvent(${evento.id})" role="button">See more</a>
             </div>
 
         </div>
@@ -75,7 +75,8 @@ function noEvent(){
 
 function swaEvent(ev){
 
-  evento=data.events.find(e=>e._id===ev)
+  /* evento=data.events.find(e=>e._id===ev) */
+  evento=data.events.find(e=>e.id===ev)
 
       Swal.fire({
       html: `
@@ -112,5 +113,21 @@ function swaEvent(ev){
 
 }
 
+/* printTemplates(data.events) */
 
-printTemplates(data.events)
+let URLApi = "https://mh-h0bh.onrender.com/api/amazing"
+fetch(URLApi).then( resp => resp.json() ).then( datos =>  printTemplates( datos.response ) ).catch( error => console.log(` Error:  ${error}` ) )
+
+/* 
+async function importData(){
+        try{
+            const resp = await fetch(URLApi)
+            let events = await resp.json()
+//                console.log( events.response );
+            printTemplates( events.response )
+        }catch(error){
+            console.log(` Error:  ${error}` ) 
+        }
+}
+
+importData() */

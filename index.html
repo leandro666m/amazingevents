@@ -57,10 +57,14 @@
     <nav class="navbar navbar-expand-lg" >
       <div class="container-fluid">
         <div class=" collapse navbar-collapse" id="navbarSearch">
-            <fieldset class="navbar-nav me-auto mb-2 mb-lg-0" id="checks-and-search">
-                  <!-- <script src="./js/template_checks_search.js"></script> -->
-            </fieldset>
-          </div>
+          <fieldset class="navbar-nav me-auto mb-2 mb-lg-0" id="checks-and-search">
+            <!-- <script src="./js/template_checks_search.js"></script> -->
+          </fieldset>
+        </div>
+        
+        <form class="d-flex" role="search">
+          <input onkeyup="captureData()" name="texto" id="id_search" class="form-control me-2" type="search" placeholder="Search">
+      </form>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch" aria-controls="navbarSearch" aria-expanded="false" aria-label="Toggle navigation">
             <div class="container" onclick="this.classList.toggle('active')">
@@ -76,11 +80,6 @@
               </svg>
             </div>
         </button>
-
-
-          <form class="d-flex" role="search">
-            <input onkeyup="captureData()" name="texto" id="id_search" class="form-control me-2" type="search" placeholder="Search">
-        </form>
 
       </div>
     </nav>
@@ -120,16 +119,11 @@
     crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
-
-    
-    <script src="./js/data.js"></script>
-    
-    <script src="./js/template_checks_search.js"></script>
     <script src="./js/template_gridcards.js"></script>
+    <script src="./js/template_checks_search.js"></script>
     
     <script src="./js/filters_search.js"></script>
     
-
 </body>
 
 
