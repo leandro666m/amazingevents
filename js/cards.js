@@ -1,4 +1,5 @@
 
+ 
 
 function cardTemplate(evento){
     return `
@@ -53,7 +54,7 @@ function noEventsFound(){
 }
 
 function printTemplates(events_array) {
-  var body_tag_id = document.querySelector('#row-cards') || document.querySelector('#row-cards-uc') || document.querySelector('#row-cards-p');
+  var body_tag_id = document.querySelector('#row-cards') || document.querySelector('#row-cards-uc') || document.querySelector('#row-cards-p') ;
         
         switch(body_tag_id.id) {
           case 'row-cards':
@@ -128,15 +129,15 @@ function captureData() {
 
 function checksTemplate( ) {
   let categorias = [] //array de categorias de eventos SIN repetirse
+
   data.forEach( each => { !categorias.includes(each.category) && categorias.push(each.category) } )
 
   categorias = categorias.map(each=> 
        `<label> <input onclick="captureData()" class="checks" type="checkbox" name="searchfilter" id="${each}" value="${each}">  ${each} &emsp; </label>` )
 
   document.querySelector('#checks-and-search').innerHTML = categorias.join('')
+  
 }
-
-
 
 
 /*---------------------- CONECTION ----------------------*/
