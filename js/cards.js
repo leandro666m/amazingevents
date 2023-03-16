@@ -141,7 +141,7 @@ function checksTemplate( ) {
 
 
 /*---------------------- CONECTION ----------------------*/
-let URLApi = "https://mh.up.railway.app/api/amazing-events"
+/* let URLApi = "https://mh.up.railway.app/api/amazing-events"
 
 let data
 let date 
@@ -152,17 +152,19 @@ let date
                       data = json.events;
                       date = json.currentDate.slice(0,10); 
                     }
-            ) 
+            ).catch( error => console.log(` Error:  ${error}` ) ) 
           
   printTemplates( data )
   checksTemplate()
-})()
+})() */
 
 
-              /* fetch(URLApi)
-            .then( resp => resp.json() )
-            .then( datos =>  printTemplates( datos.response ) )
-              .catch( error => console.log(` Error:  ${error}` ) ) 
+
+/*
+ fetch(URLApi)
+.then( resp => resp.json() )
+.then( datos =>  printTemplates( datos.response ) )
+  .catch( error => console.log(` Error:  ${error}` ) ) 
              
 async function importData(){
         try{
@@ -177,4 +179,5 @@ async function importData(){
 }
 
 importData()
+
 */

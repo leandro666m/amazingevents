@@ -19,7 +19,7 @@
 
 <body id="index">
 
-  <div class="container">
+  <div class="container" id="app">
 
     <!-- navbar -->
     <nav class="navbar bg-body-tertiary navbar-expand-lg ">
@@ -58,12 +58,17 @@
       <div class="container-fluid">
         <div class=" collapse navbar-collapse" id="navbarSearch">
           <fieldset class="navbar-nav me-auto mb-2 mb-lg-0" id="checks-and-search">
-            <!-- <script src="./js/template_checks_search.js"></script> -->
+            <template v-for="categ of categorias">
+              <label> 
+                <input v-on:click="captureData()" class="checks" type="checkbox" name="searchfilter" v-bind:id="categ" v-bind:value="categ">  
+                  {{categ}} &emsp; 
+                </label>
+            </template>
           </fieldset>
         </div>
         
         <form class="d-flex" role="search">
-          <input onkeyup="captureData()" name="texto" id="id_search" class="form-control me-2" type="search" placeholder="Search">
+          <input v-on:keyup="captureData()" name="texto" id="id_search" class="form-control me-2" type="search" placeholder="Search">
       </form>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch" aria-controls="navbarSearch" aria-expanded="false" aria-label="Toggle navigation">
@@ -85,9 +90,32 @@
     </nav>
 
     <!-- Cards -->
-    <div class="row row-cols-1 row-cols-lg-4 g-4 mt-5" id="row-cards" > 
-      <div id="app">{{ message }}</div>  
-    </div>
+    <div class="row row-cols-1 row-cols-lg-4 g-4 mt-5" > 
+
+        <template v-for="ev in eventos">
+          
+          <div class="col">
+            <div class="card h-100">
+                <div class="card-img-container">
+                  <img v-bind:src="ev.image" class="card-img-top" v-bind:alt="'imagen de '+ev.name"/>
+                </div>
+    
+                <div class="card-body">
+                  <h5 class="card-title">{{ev.name}}</h5> <small class="text-muted">{{ev.date.slice(0,10)}}</small>
+                  <p class="card-text"> {{ev.description}} </p>
+                </div>
+    
+                <div class="card-footer">
+                  <small class="text-muted">Price: $ {{ev.price}}</small>
+                  <a class="btn btn-primary" onclick="swaEventDetail('{{ev.id}}')" role="button">See more</a>
+                </div>
+            </div>
+          </div>
+          
+        </template>
+
+
+    </div><!-- Cards -->
     
     <!-- Footer -->
     <footer class="text-center text-lg-start container">
