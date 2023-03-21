@@ -24,13 +24,15 @@ let upcoming
     await fetch("https://mh.up.railway.app/api/amazing-events?time=upcoming").then( resp => resp.json() ).then( json => upcoming = json.events ) 
 
     /* Events with highest percentage of attendance */
-    let sortedPastAtt = [...past].sort((a, b) => b.assistance - a.assistance);
-        document.querySelector('#max-att').innerHTML = sortedPastAtt[0].assistance 
+    let sortedPastAtt = [...past].sort((a, b) => (b.assistance/b.capacity) - (a.assistance/a.capacity));
+        document.querySelector('#max-att').innerHTML = `${sortedPastAtt[0].name}` + ` - ${(sortedPastAtt[0].assistance/sortedPastAtt[0].capacity *100).toFixed(2) }%`
+
     /* Events with lowest percentage of attendance */
-        document.querySelector('#min-att').innerHTML = sortedPastAtt[ sortedPastAtt.length-1 ].assistance 
+        document.querySelector('#min-att').innerHTML = `${sortedPastAtt[sortedPastAtt.length-1].name}` + ` - ${(sortedPastAtt[sortedPastAtt.length-1].assistance/sortedPastAtt[sortedPastAtt.length-1].capacity *100).toFixed(2) }%`
+
     /* Events with larger capacity */
     let sortedPastCapac = past.sort((a, b) => b.capacity - a.capacity);
-        document.querySelector('#max-cap').innerHTML = sortedPastCapac[0].capacity
+        document.querySelector('#max-cap').innerHTML = `${sortedPastCapac[0].name} `+`with ${sortedPastCapac[0].capacity} spectators`
 
         
         let categorias = [] //array de categorias de eventos SIN repetirse
